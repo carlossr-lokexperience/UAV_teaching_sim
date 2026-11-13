@@ -1,0 +1,38 @@
+[
+  {
+    "source": "MAP",
+    "guidance": "PURE_PURSUIT",
+    "seconds": 120.0,
+    "rms_m": 0.38538163163045264,
+    "max_m": 0.8600728158316732,
+    "maintained_follow": true,
+    "wall_seconds": 0.8503276640000195
+  },
+  {
+    "source": "MAP",
+    "guidance": "VECTOR_FIELD",
+    "seconds": 120.0,
+    "rms_m": 0.045024666872198596,
+    "max_m": 0.1316943826308982,
+    "maintained_follow": true,
+    "wall_seconds": 0.6768624219999992
+  },
+  {
+    "source": "CAMERA",
+    "guidance": "PURE_PURSUIT",
+    "seconds": 120.0,
+    "rms_m": 0.5087894570002246,
+    "max_m": 1.2103386702921861,
+    "maintained_follow": true,
+    "wall_seconds": 9.832756317000076
+  },
+  {
+    "source": "CAMERA",
+    "guidance": "VECTOR_FIELD",
+    "seconds": 120.0,
+    "rms_m": 0.30551123325453006,
+    "max_m": 0.5788751245154541,
+    "maintained_follow": true,
+    "wall_seconds": 9.002443110000058
+  }
+]

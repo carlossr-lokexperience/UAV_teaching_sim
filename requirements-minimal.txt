@@ -1,0 +1,3 @@
+# Solo MAP. Cambia PERCEPTION_ENABLED=False en config.py.
+numpy>=1.24,<3
+Pillow>=10,<13

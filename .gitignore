@@ -1,0 +1,19 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Credenciales
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+*.log
+logs/
+outputs/
+.DS_Store

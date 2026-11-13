@@ -1,0 +1,7 @@
+# Python 3.10 recomendado. Codigo compatible sintacticamente con Python 3.9+.
+# pip selecciona una rueda compatible; no se fuerza actualizar el Python del alumno.
+numpy>=1.24,<3
+Pillow>=10,<13
+opencv-python-headless>=4.8,<5
+# Tkinter es parte de Python; en Ubuntu puede requerir python3-tk (no es un paquete pip).
+# No instales a la vez opencv-python y opencv-python-headless en el mismo venv.

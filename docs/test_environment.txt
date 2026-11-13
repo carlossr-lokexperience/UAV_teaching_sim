@@ -1,0 +1,5 @@
+Python 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Linux-6.18.57-x86_64-with-glibc2.41
+numpy==2.3.5
+Pillow==12.3.0
+opencv-python-headless (cv2)==4.13.0
