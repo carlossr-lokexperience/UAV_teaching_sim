@@ -120,11 +120,22 @@ def validate_command(command, settings, state):
     if "speed_delta_mps" in command:
         candidate.speed_mps += command["speed_delta_mps"]
     if "heading_deg" in command or "heading_delta_deg" in command:
-        if command.get("mode", "HEADING") != "HEADING":
-            raise ValueError("Girar a un rumbo activa HEADING; no mezcles con seguir carretera")
+
+        # Una orden de giro activa automaticamente HEADING
         candidate.mode = "HEADING"
-        candidate.heading_rad = wrap_pi(math.radians(command["heading_deg"]) if "heading_deg" in command
-                                        else state.heading+math.radians(command["heading_delta_deg"]))
+
+        if "heading_deg" in command:
+            # Rumbo absoluto
+            candidate.heading_rad = wrap_pi(
+                math.radians(command["heading_deg"])
+            )
+        else:
+            # Giro relativo al rumbo actual
+            candidate.heading_rad = wrap_pi(
+                state.heading +
+                math.radians(command["heading_delta_deg"])
+            )
+
     elif candidate.mode == "HEADING" and settings.mode != "HEADING":
         candidate.heading_rad = state.heading
     if candidate.mode == "MANUAL" and settings.mode != "MANUAL":

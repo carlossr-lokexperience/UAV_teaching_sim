@@ -6,11 +6,11 @@ from dataclasses import dataclass
 
 # ============= CAMBIA ESTO EN CLASE =============
 FLIGHT_MODE = "FOLLOW_ROAD"      # FOLLOW_ROAD / HEADING / MANUAL
-GUIDANCE_METHOD = "PURE_PURSUIT" # PURE_PURSUIT / VECTOR_FIELD
+GUIDANCE_METHOD = "VECTOR_FIELD" # PURE_PURSUIT / VECTOR_FIELD
 ROAD_SOURCE = "MAP"             # MAP / CAMERA (CAMERA nunca consulta el mapa)
 NAVIGATION_METHOD = "PERFECT"    # PERFECT / NOISY / FILTERED (alpha-beta, NO EKF)
 CONTROL_METHOD = "P"            # P / PID (lazos educativos, no aerodinamica 6-DOF)
-COMMAND_PARSER = "RULES"         # RULES / LLM; RULES NO es un modelo de lenguaje
+COMMAND_PARSER = "LLM"         # RULES / LLM; RULES NO es un modelo de lenguaje
 
 TARGET_ALTITUDE_M = 100.0
 TARGET_SPEED_MPS = 20.0
@@ -75,10 +75,10 @@ START_ROAD_FRACTION = 0.0
 # No se descarga ni instala un modelo. Configura un servicio YA disponible.
 # OLLAMA usa /api/chat; OPENAI_COMPATIBLE usa /chat/completions.
 # Las llamadas son asincronas: la simulacion NO espera al LLM.
-LLM_PROVIDER = "OLLAMA"        # OLLAMA / OPENAI_COMPATIBLE
-LLM_BASE_URL = "http://127.0.0.1:11434"
-LLM_MODEL = ""                 # Nombre EXACTO de tu modelo; vacio da error explicito
-LLM_API_KEY_ENV = "UAV_LLM_API_KEY"  # Nunca escribas claves en el repositorio
+LLM_PROVIDER = "OPENAI_COMPATIBLE"
+LLM_BASE_URL = "https://api.openai.com/v1"
+LLM_MODEL = "gpt-4o-mini"               # Nombre EXACTO de tu modelo; vacio da error explicito
+LLM_API_KEY_ENV = "UAV_LLM_API_KEY"
 LLM_TIMEOUT_S = 15.0
 LLM_MAX_RESPONSE_BYTES = 65536
 

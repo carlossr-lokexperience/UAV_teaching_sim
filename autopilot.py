@@ -1,4 +1,4 @@
-"""AUTOPILOTO: coordinador pequeno; no dibuja, no llama a un LLM y no lee sensores.
+"""AUTOPILOTO: coordinador pequeño; no dibuja, no llama a un LLM y no lee sensores.
 Recibe SOLO estado estimado y una fuente de carretera. Las funciones de guiado
 son intercambiables. Sin orbita. Ante perdida de vision/navegacion: HEADING.
 HEADING es una contingencia docente, NO una estrategia de seguridad real.
